@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decodificador</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <script src="script.js"></script>
+    </head>
 <body>
-    
+    <header>
+        <img id="logo" src="assets/logo.png" alt="Logo Alura" class="logo">
+    </header>
+    <main class="main">
+        <section class="div-textarea">
+            <div class="cripto">
+                <textarea class ="text-input" id="textarea" spellcheck = false style="resize: none" type="text" placeholder="Digite seu texto" rows="10" cols="10"></textarea>
+                <div class="form-group">
+                    <div class="alerta">
+                        <img class="imagem-exclamacao" src="assets/exclamacao.png">
+                        <p class="alerta-texto">Apenas letras minúsculas e sem acento.</p>
+                    </div>
+
+                    <div class="botoes-div">
+                        <button onclick="encripta()" class="btn-criptografar">Criptografar</button>
+                        <button onclick="desencripta()"  class="btn-decriptografar">Decriptografar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="aparece">
+            <div class="div-aparece">
+                <p class="div-resposta" id="respostaGerada" style="visibility: hidden;"></p>
+                 <div class="div-resposta-imagbox" id="caixaImagem" style="visibility: visible;">
+                    <img src="assets/image.png" class="img-alerta" id="imgResposta">
+                    <p class="none-mensagem">Nenhuma mensagem encontrada</p>
+                    <p class="none-mensagem2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                    <button onclick="copy()" class="btn-copiar" id="copybutton" style="visibility: hidden;">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Desenvolvido por Patrícia Sampaio
+    </footer>
 </body>
 </html>
